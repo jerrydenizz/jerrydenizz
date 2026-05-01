@@ -3,149 +3,190 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jerry Deniz Reklam</title>
+<title>Jerry Deniz Reklam Ajansı</title>
 <style>
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
   margin:0;
   font-family:Arial, sans-serif;
   color:white;
-  background:radial-gradient(circle at top,#3b0764,#090014 45%,#050505);
+  background:radial-gradient(circle at top,#4c0b78,#080010 45%,#020202);
 }
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:30px 15px;
+.container{max-width:1150px;margin:auto;padding:25px 15px}
+.nav{
+  position:sticky;top:0;z-index:10;
+  background:rgba(5,0,10,.88);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #7e22ce;
+}
+.nav-inner{
+  max-width:1150px;margin:auto;padding:12px 15px;
+  display:flex;gap:10px;justify-content:center;flex-wrap:wrap;
+}
+.nav a{
+  color:white;text-decoration:none;font-weight:bold;
+  padding:10px 13px;border-radius:12px;
+  background:rgba(126,34,206,.35);
 }
 .hero{
-  text-align:center;
-  padding:45px 20px;
-  border:2px solid #a855f7;
-  border-radius:25px;
-  box-shadow:0 0 35px #9333ea;
+  text-align:center;padding:60px 20px;margin-top:20px;
+  border:2px solid #a855f7;border-radius:28px;
   background:rgba(0,0,0,.55);
+  box-shadow:0 0 40px #9333ea;
 }
 h1{
-  font-size:52px;
-  margin:0;
-  color:#fff;
-  text-shadow:0 0 18px #a855f7;
+  font-size:54px;margin:0;
+  text-shadow:0 0 20px #a855f7;
 }
-.hero span{color:#c084fc}
-.subtitle{
-  font-size:20px;
-  margin-top:15px;
-}
+h1 span{color:#d8b4fe}
+.subtitle{font-size:21px;line-height:1.6}
 .section{
-  margin-top:30px;
-  background:rgba(20,0,35,.75);
-  border:1px solid #7e22ce;
-  border-radius:22px;
-  padding:25px;
-  box-shadow:0 0 22px rgba(168,85,247,.5);
+  margin-top:30px;padding:28px;
+  background:rgba(18,0,32,.78);
+  border:1px solid #7e22ce;border-radius:24px;
+  box-shadow:0 0 24px rgba(168,85,247,.45);
 }
-h2{
-  text-align:center;
-  color:#d8b4fe;
-  margin-top:0;
-}
+h2{text-align:center;color:#d8b4fe;margin-top:0;font-size:32px}
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
-  gap:15px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
 }
 .card{
-  background:#090011;
-  border:1px solid #9333ea;
-  border-radius:18px;
-  padding:18px;
-  text-align:center;
+  background:linear-gradient(180deg,#12001f,#07000d);
+  border:1px solid #9333ea;border-radius:20px;
+  padding:20px;text-align:center;
 }
-.icon{font-size:35px}
+.icon{font-size:38px}
+.card h3{color:#c084fc}
+.card p{line-height:1.6}
 .price{
-  font-size:36px;
-  font-weight:bold;
-  color:#fff;
+  font-size:34px;font-weight:bold;
   text-shadow:0 0 12px #a855f7;
 }
-.package h3{color:#c084fc}
-ul{
+ul{text-align:left;line-height:1.9}
+.example{
   text-align:left;
-  line-height:1.8;
+  background:#07000d;
+  border-left:5px solid #c084fc;
 }
-.extra{
-  color:#22c55e;
+.badge{
+  display:inline-block;
+  padding:7px 12px;
+  border-radius:999px;
+  background:#7e22ce;
+  margin-bottom:8px;
   font-weight:bold;
 }
-.links a{
+.steps{
+  counter-reset:step;
+}
+.step{
+  position:relative;text-align:left;padding-left:55px;
+}
+.step:before{
+  counter-increment:step;
+  content:counter(step);
+  position:absolute;left:15px;top:20px;
+  width:30px;height:30px;border-radius:50%;
+  background:#a855f7;display:grid;place-items:center;
+  font-weight:bold;
+}
+.links a,.main-btn{
   display:block;
+  max-width:560px;
   margin:12px auto;
-  max-width:520px;
   padding:16px;
   border-radius:15px;
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
+  color:white;text-decoration:none;font-weight:bold;text-align:center;
   background:linear-gradient(90deg,#7e22ce,#db2777);
-  box-shadow:0 0 15px rgba(168,85,247,.7);
+  box-shadow:0 0 15px rgba(168,85,247,.65);
 }
-.cta{
+.note{
   text-align:center;
-  font-size:28px;
+  font-size:24px;
   font-weight:bold;
-  color:#fff;
 }
-footer{
-  text-align:center;
-  padding:25px;
-  color:#aaa;
-}
+footer{text-align:center;padding:25px;color:#aaa}
 </style>
 </head>
 
 <body>
+
+<div class="nav">
+  <div class="nav-inner">
+    <a href="#reklam">Reklam Alanları</a>
+    <a href="#ornek">Örnek Reklamlar</a>
+    <a href="#paket">Paketler</a>
+    <a href="#nasil">Nasıl Çalışır?</a>
+    <a href="#linkler">Linkler</a>
+  </div>
+</div>
+
 <div class="container">
 
-  <div class="hero">
+  <section class="hero">
     <h1>REKLAMINI <span>BİZE VER!</span></h1>
-    <p class="subtitle">Ürününü, hizmetini, ilanını ve markanı daha fazla kişiye ulaştır.</p>
-    <p>JerryDeniz reklam alanı ile öne çık!</p>
-  </div>
+    <p class="subtitle">
+      Aracını, evini, işletmeni, ürününü veya kampanyanı Jerry Deniz kitlesine tanıt.
+      Sosyal medya, canlı yayın ve içerik gücüyle reklamını daha görünür hale getiriyoruz.
+    </p>
+    <a class="main-btn" href="#paket">Paketleri Gör</a>
+  </section>
 
-  <div class="section">
-    <h2>📢 Her Sektörden Reklam Alıyoruz</h2>
+  <section class="section" id="reklam">
+    <h2>📢 Nelerin Reklamını Yapıyoruz?</h2>
     <div class="grid">
-      <div class="card"><div class="icon">🚗</div><h3>Araç Satışı</h3><p>Arabanı daha fazla kişiye ulaştır.</p></div>
-      <div class="card"><div class="icon">🏠</div><h3>Ev & Gayrimenkul</h3><p>Konut, arsa, kiralık ve satılık ilanları.</p></div>
-      <div class="card"><div class="icon">🏪</div><h3>İşyeri & Mekan</h3><p>Dükkan, kafe, restoran ve ofis tanıtımı.</p></div>
-      <div class="card"><div class="icon">📦</div><h3>Ürün & Hizmet</h3><p>Ürününü veya hizmetini öne çıkar.</p></div>
-      <div class="card"><div class="icon">🏷️</div><h3>Fırsat & İndirim</h3><p>Kampanya ve özel fırsat duyuruları.</p></div>
+      <div class="card"><div class="icon">🚗</div><h3>Araç Satışı</h3><p>Satılık araç ilanlarını daha fazla kişiye duyuruyoruz.</p></div>
+      <div class="card"><div class="icon">🏠</div><h3>Ev & Gayrimenkul</h3><p>Satılık, kiralık ev, arsa ve gayrimenkul ilanları.</p></div>
+      <div class="card"><div class="icon">🏪</div><h3>Mekan & Dükkan</h3><p>Kafe, restoran, mağaza, ofis ve işletme tanıtımları.</p></div>
+      <div class="card"><div class="icon">📦</div><h3>Ürün & Hizmet</h3><p>Ürün, marka, hizmet ve kampanya tanıtımları.</p></div>
+      <div class="card"><div class="icon">🎁</div><h3>Kutu Açılışı</h3><p>Ürünlerinizi kutu açılışı konseptiyle tanıtıyoruz.</p></div>
+      <div class="card"><div class="icon">🔥</div><h3>Fırsat & İndirim</h3><p>Kampanya ve özel indirimlerinizi duyuruyoruz.</p></div>
     </div>
-  </div>
+  </section>
 
-  <div class="section">
-    <h2>🎁 Kutu Açılışı Reklamı</h2>
+  <section class="section" id="ornek">
+    <h2>📝 Örnek Reklam İçerikleri</h2>
     <div class="grid">
-      <div class="card"><div class="icon">🎁</div><h3>Ürün Tanıtımı</h3><p>Ürününü yayın veya video içinde kutu açılışıyla tanıtalım.</p></div>
-      <div class="card"><div class="icon">🔥</div><h3>Eğlenceli İçerik</h3><p>Reklamın daha dikkat çekici ve akılda kalıcı olsun.</p></div>
-      <div class="card"><div class="icon">💬</div><h3>Canlı Etkileşim</h3><p>İzleyiciler ürünü canlı yayında görür ve sorular sorabilir.</p></div>
+      <div class="card example">
+        <span class="badge">Araç Reklamı</span>
+        <h3>Satılık Temiz Araç</h3>
+        <p>Model, fiyat ve iletişim bilgileriyle aracınızı sosyal medya ve yayın kitlesine duyuruyoruz.</p>
+      </div>
+      <div class="card example">
+        <span class="badge">Ev Reklamı</span>
+        <h3>Satılık / Kiralık Ev</h3>
+        <p>Ev, arsa veya gayrimenkul ilanınızı dikkat çekici bir tanıtım metniyle paylaşıyoruz.</p>
+      </div>
+      <div class="card example">
+        <span class="badge">Mekan Reklamı</span>
+        <h3>Kafe, Restoran, Dükkan</h3>
+        <p>İşletmenizi, konumunuzu ve hizmetlerinizi öne çıkaran reklam içerikleri hazırlıyoruz.</p>
+      </div>
+      <div class="card example">
+        <span class="badge">Ürün Reklamı</span>
+        <h3>Ürün Tanıtımı</h3>
+        <p>Ürününüzü post, hikaye, video veya kutu açılışı konseptiyle tanıtıyoruz.</p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section">
-    <h2>💰 Reklam Paketlerimiz</h2>
+  <section class="section" id="paket">
+    <h2>💰 Reklam Paketleri</h2>
     <div class="grid">
-      <div class="card package">
+      <div class="card">
         <h3>Başlangıç</h3>
         <ul>
           <li>Yayında 1 kez duyuru</li>
           <li>Discord paylaşımı</li>
-          <li>Sosyal medya hikaye</li>
+          <li>1 sosyal medya hikayesi</li>
         </ul>
         <div class="price">149₺</div>
       </div>
 
-      <div class="card package">
+      <div class="card">
         <h3>Standart</h3>
         <ul>
           <li>Yayında 3 kez duyuru</li>
@@ -156,7 +197,7 @@ footer{
         <div class="price">299₺</div>
       </div>
 
-      <div class="card package">
+      <div class="card">
         <h3>Pro</h3>
         <ul>
           <li>Yayın boyunca tanıtım</li>
@@ -167,47 +208,57 @@ footer{
         <div class="price">499₺</div>
       </div>
 
-      <div class="card package">
+      <div class="card">
         <h3>VIP</h3>
         <ul>
           <li>7 gün reklam</li>
-          <li>Yayınlarda özel vurgu</li>
+          <li>Yayında özel vurgu</li>
           <li>Tüm platformlarda öne çıkarma</li>
           <li>Link + sabit yorum</li>
         </ul>
         <div class="price">799₺</div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section">
-    <h2>➕ Ekstra Hizmetler</h2>
+  <section class="section">
+    <h2>🎁 Kutu Açılışı Reklam Paketi</h2>
     <div class="grid">
-      <div class="card"><h3>🎯 Hedefli Reklam</h3><p class="extra">+100₺</p></div>
-      <div class="card"><h3>🎨 Özel Afiş Tasarımı</h3><p class="extra">+75₺</p></div>
-      <div class="card"><h3>📌 Sabit Mesaj</h3><p class="extra">+50₺</p></div>
-      <div class="card"><h3>🎁 Kutu Açılışı Ek Paketi</h3><p class="extra">+199₺</p></div>
+      <div class="card"><div class="icon">📦</div><h3>Ürün Gönderimi</h3><p>Ürününüz yayın/video konseptinde tanıtılır.</p></div>
+      <div class="card"><div class="icon">🎥</div><h3>Video İçerik</h3><p>Kutu açılışı daha dikkat çekici içerik haline getirilir.</p></div>
+      <div class="card"><div class="icon">💬</div><h3>Canlı Etkileşim</h3><p>İzleyiciler ürünü görür, yorum yapar ve soru sorabilir.</p></div>
     </div>
-  </div>
+  </section>
 
-  <div class="section links">
+  <section class="section steps" id="nasil">
+    <h2>⚙️ Nasıl Çalışır?</h2>
+    <div class="grid">
+      <div class="card step"><h3>Bilgileri Gönder</h3><p>Reklam yapılacak ürün, araç, ev veya işletme bilgilerini ilet.</p></div>
+      <div class="card step"><h3>Paket Seç</h3><p>Başlangıç, Standart, Pro veya VIP paketlerinden birini seç.</p></div>
+      <div class="card step"><h3>İçerik Hazırlansın</h3><p>Reklam metni, afiş veya paylaşım içeriği hazırlanır.</p></div>
+      <div class="card step"><h3>Yayınlansın</h3><p>Reklam sosyal medya, Discord veya yayınlarda paylaşılır.</p></div>
+    </div>
+  </section>
+
+  <section class="section links" id="linkler">
     <h2>🔗 Tüm Linklerimiz</h2>
-    <a href="https://jerrydenizz.github.io/" target="_blank">🌐 Web Sitemiz</a>
+    <a href="https://jerrydenizz.github.io/" target="_blank">🌐 Web Site</a>
     <a href="https://youtube.com/@jerrydenizz" target="_blank">🎮 YouTube Oyun Kanalı</a>
     <a href="https://www.youtube.com/@deniz_kopal" target="_blank">🎵 YouTube Müzik Kanalı</a>
     <a href="https://twitch.tv/jerrydenizz" target="_blank">🟣 Twitch</a>
     <a href="https://instagram.com/jerrydenizz" target="_blank">📸 Instagram</a>
     <a href="https://tiktok.com/@jerrydenizz" target="_blank">🎵 TikTok</a>
     <a href="https://discord.gg/ZfGRnVXY" target="_blank">💬 Discord</a>
-  </div>
+  </section>
 
-  <div class="section">
-    <p class="cta">Senin reklamın, bizim gücümüz! 🚀</p>
-    <p style="text-align:center">Yerini ayırt, öne çık!</p>
-  </div>
+  <section class="section">
+    <p class="note">Senin reklamın, bizim gücümüz! 🚀</p>
+    <p style="text-align:center">Reklam alanı, sosyal medya tanıtımı ve kutu açılışı iş birlikleri için bize ulaş.</p>
+  </section>
 
 </div>
 
-<footer>© 2026 Jerry Deniz Reklam</footer>
+<footer>© 2026 Jerry Deniz Reklam | Tüm Hakları Saklıdır</footer>
+
 </body>
 </html>
