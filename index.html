@@ -7,107 +7,28 @@
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  color:white;
-  background:radial-gradient(circle at top,#4c0b78,#080010 45%,#020202);
-}
+body{margin:0;font-family:Arial,sans-serif;color:white;background:radial-gradient(circle at top,#4c0b78,#080010 45%,#020202)}
 .container{max-width:1150px;margin:auto;padding:25px 15px}
-.nav{
-  position:sticky;top:0;z-index:10;
-  background:rgba(5,0,10,.88);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid #7e22ce;
-}
-.nav-inner{
-  max-width:1150px;margin:auto;padding:12px 15px;
-  display:flex;gap:10px;justify-content:center;flex-wrap:wrap;
-}
-.nav a{
-  color:white;text-decoration:none;font-weight:bold;
-  padding:10px 13px;border-radius:12px;
-  background:rgba(126,34,206,.35);
-}
-.hero{
-  text-align:center;padding:60px 20px;margin-top:20px;
-  border:2px solid #a855f7;border-radius:28px;
-  background:rgba(0,0,0,.55);
-  box-shadow:0 0 40px #9333ea;
-}
-h1{
-  font-size:54px;margin:0;
-  text-shadow:0 0 20px #a855f7;
-}
+.nav{position:sticky;top:0;z-index:10;background:rgba(5,0,10,.9);border-bottom:1px solid #7e22ce}
+.nav-inner{max-width:1150px;margin:auto;padding:12px 15px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.nav a{color:white;text-decoration:none;font-weight:bold;padding:10px 13px;border-radius:12px;background:rgba(126,34,206,.45)}
+.hero{text-align:center;padding:60px 20px;margin-top:20px;border:2px solid #a855f7;border-radius:28px;background:rgba(0,0,0,.55);box-shadow:0 0 40px #9333ea}
+h1{font-size:52px;margin:0;text-shadow:0 0 20px #a855f7}
 h1 span{color:#d8b4fe}
 .subtitle{font-size:21px;line-height:1.6}
-.section{
-  margin-top:30px;padding:28px;
-  background:rgba(18,0,32,.78);
-  border:1px solid #7e22ce;border-radius:24px;
-  box-shadow:0 0 24px rgba(168,85,247,.45);
-}
+.section{margin-top:30px;padding:28px;background:rgba(18,0,32,.78);border:1px solid #7e22ce;border-radius:24px;box-shadow:0 0 24px rgba(168,85,247,.45)}
 h2{text-align:center;color:#d8b4fe;margin-top:0;font-size:32px}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:16px;
-}
-.card{
-  background:linear-gradient(180deg,#12001f,#07000d);
-  border:1px solid #9333ea;border-radius:20px;
-  padding:20px;text-align:center;
-}
-.icon{font-size:38px}
-.card h3{color:#c084fc}
-.card p{line-height:1.6}
-.price{
-  font-size:34px;font-weight:bold;
-  text-shadow:0 0 12px #a855f7;
-}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:linear-gradient(180deg,#12001f,#07000d);border:1px solid #9333ea;border-radius:20px;padding:20px;text-align:center}
+.icon{font-size:38px}.card h3{color:#c084fc}.card p{line-height:1.6}
+.price{font-size:34px;font-weight:bold;text-shadow:0 0 12px #a855f7}
 ul{text-align:left;line-height:1.9}
-.example{
-  text-align:left;
-  background:#07000d;
-  border-left:5px solid #c084fc;
-}
-.badge{
-  display:inline-block;
-  padding:7px 12px;
-  border-radius:999px;
-  background:#7e22ce;
-  margin-bottom:8px;
-  font-weight:bold;
-}
-.steps{
-  counter-reset:step;
-}
-.step{
-  position:relative;text-align:left;padding-left:55px;
-}
-.step:before{
-  counter-increment:step;
-  content:counter(step);
-  position:absolute;left:15px;top:20px;
-  width:30px;height:30px;border-radius:50%;
-  background:#a855f7;display:grid;place-items:center;
-  font-weight:bold;
-}
-.links a,.main-btn{
-  display:block;
-  max-width:560px;
-  margin:12px auto;
-  padding:16px;
-  border-radius:15px;
-  color:white;text-decoration:none;font-weight:bold;text-align:center;
-  background:linear-gradient(90deg,#7e22ce,#db2777);
-  box-shadow:0 0 15px rgba(168,85,247,.65);
-}
-.note{
-  text-align:center;
-  font-size:24px;
-  font-weight:bold;
-}
+.btn,.links a,button{display:block;width:100%;max-width:560px;margin:12px auto;padding:16px;border-radius:15px;color:white;text-decoration:none;font-weight:bold;text-align:center;background:linear-gradient(90deg,#7e22ce,#db2777);box-shadow:0 0 15px rgba(168,85,247,.65);border:none;font-size:16px;cursor:pointer}
+form{max-width:700px;margin:auto}
+input,select,textarea{width:100%;padding:15px;margin:10px 0;border-radius:14px;border:1px solid #9333ea;background:#080010;color:white;font-size:16px}
+textarea{height:140px;resize:none}
+.note{text-align:center;font-size:24px;font-weight:bold}
+.mail{text-align:center;color:#d8b4fe;font-size:20px}
 footer{text-align:center;padding:25px;color:#aaa}
 </style>
 </head>
@@ -117,148 +38,120 @@ footer{text-align:center;padding:25px;color:#aaa}
 <div class="nav">
   <div class="nav-inner">
     <a href="#reklam">Reklam Alanları</a>
-    <a href="#ornek">Örnek Reklamlar</a>
     <a href="#paket">Paketler</a>
-    <a href="#nasil">Nasıl Çalışır?</a>
+    <a href="#form">Başvuru Formu</a>
     <a href="#linkler">Linkler</a>
   </div>
 </div>
 
 <div class="container">
 
-  <section class="hero">
-    <h1>REKLAMINI <span>BİZE VER!</span></h1>
-    <p class="subtitle">
-      Aracını, evini, işletmeni, ürününü veya kampanyanı Jerry Deniz kitlesine tanıt.
-      Sosyal medya, canlı yayın ve içerik gücüyle reklamını daha görünür hale getiriyoruz.
-    </p>
-    <a class="main-btn" href="#paket">Paketleri Gör</a>
-  </section>
+<section class="hero">
+  <h1>REKLAMINI <span>BİZE VER!</span></h1>
+  <p class="subtitle">Araç, ev, dükkan, ürün, hizmet, kampanya ve kutu açılışı reklamlarını profesyonel şekilde tanıtıyoruz.</p>
+  <a class="btn" href="#form">📩 Reklam Başvurusu Yap</a>
+</section>
 
-  <section class="section" id="reklam">
-    <h2>📢 Nelerin Reklamını Yapıyoruz?</h2>
-    <div class="grid">
-      <div class="card"><div class="icon">🚗</div><h3>Araç Satışı</h3><p>Satılık araç ilanlarını daha fazla kişiye duyuruyoruz.</p></div>
-      <div class="card"><div class="icon">🏠</div><h3>Ev & Gayrimenkul</h3><p>Satılık, kiralık ev, arsa ve gayrimenkul ilanları.</p></div>
-      <div class="card"><div class="icon">🏪</div><h3>Mekan & Dükkan</h3><p>Kafe, restoran, mağaza, ofis ve işletme tanıtımları.</p></div>
-      <div class="card"><div class="icon">📦</div><h3>Ürün & Hizmet</h3><p>Ürün, marka, hizmet ve kampanya tanıtımları.</p></div>
-      <div class="card"><div class="icon">🎁</div><h3>Kutu Açılışı</h3><p>Ürünlerinizi kutu açılışı konseptiyle tanıtıyoruz.</p></div>
-      <div class="card"><div class="icon">🔥</div><h3>Fırsat & İndirim</h3><p>Kampanya ve özel indirimlerinizi duyuruyoruz.</p></div>
-    </div>
-  </section>
+<section class="section" id="reklam">
+  <h2>📢 Nelerin Reklamını Yapıyoruz?</h2>
+  <div class="grid">
+    <div class="card"><div class="icon">🚗</div><h3>Araç Satışı</h3><p>Satılık araç ilanınızı geniş kitleye duyuruyoruz.</p></div>
+    <div class="card"><div class="icon">🏠</div><h3>Ev & Gayrimenkul</h3><p>Ev, arsa, kiralık ve satılık ilan tanıtımı.</p></div>
+    <div class="card"><div class="icon">🏪</div><h3>Mekan & Dükkan</h3><p>Kafe, restoran, mağaza ve işletme tanıtımı.</p></div>
+    <div class="card"><div class="icon">📦</div><h3>Ürün & Hizmet</h3><p>Ürün, marka ve hizmetlerinizi öne çıkarıyoruz.</p></div>
+    <div class="card"><div class="icon">🎁</div><h3>Kutu Açılışı</h3><p>Ürünleri kutu açılışı konseptiyle tanıtıyoruz.</p></div>
+    <div class="card"><div class="icon">🔥</div><h3>Kampanya</h3><p>İndirim ve özel fırsat reklamları.</p></div>
+  </div>
+</section>
 
-  <section class="section" id="ornek">
-    <h2>📝 Örnek Reklam İçerikleri</h2>
-    <div class="grid">
-      <div class="card example">
-        <span class="badge">Araç Reklamı</span>
-        <h3>Satılık Temiz Araç</h3>
-        <p>Model, fiyat ve iletişim bilgileriyle aracınızı sosyal medya ve yayın kitlesine duyuruyoruz.</p>
-      </div>
-      <div class="card example">
-        <span class="badge">Ev Reklamı</span>
-        <h3>Satılık / Kiralık Ev</h3>
-        <p>Ev, arsa veya gayrimenkul ilanınızı dikkat çekici bir tanıtım metniyle paylaşıyoruz.</p>
-      </div>
-      <div class="card example">
-        <span class="badge">Mekan Reklamı</span>
-        <h3>Kafe, Restoran, Dükkan</h3>
-        <p>İşletmenizi, konumunuzu ve hizmetlerinizi öne çıkaran reklam içerikleri hazırlıyoruz.</p>
-      </div>
-      <div class="card example">
-        <span class="badge">Ürün Reklamı</span>
-        <h3>Ürün Tanıtımı</h3>
-        <p>Ürününüzü post, hikaye, video veya kutu açılışı konseptiyle tanıtıyoruz.</p>
-      </div>
-    </div>
-  </section>
+<section class="section" id="paket">
+  <h2>💰 Reklam Paketleri</h2>
+  <div class="grid">
+    <div class="card"><h3>Başlangıç</h3><ul><li>Yayında 1 duyuru</li><li>Discord paylaşımı</li><li>1 hikaye</li></ul><div class="price">149₺</div></div>
+    <div class="card"><h3>Standart</h3><ul><li>3 yayın duyurusu</li><li>Discord + sosyal medya</li><li>Hikaye + post</li></ul><div class="price">299₺</div></div>
+    <div class="card"><h3>Pro</h3><ul><li>Yayın boyunca tanıtım</li><li>Tüm platformlarda paylaşım</li><li>3 gün sabit reklam</li></ul><div class="price">499₺</div></div>
+    <div class="card"><h3>VIP</h3><ul><li>7 gün reklam</li><li>Özel vurgu</li><li>Link + sabit yorum</li></ul><div class="price">799₺</div></div>
+  </div>
+</section>
 
-  <section class="section" id="paket">
-    <h2>💰 Reklam Paketleri</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Başlangıç</h3>
-        <ul>
-          <li>Yayında 1 kez duyuru</li>
-          <li>Discord paylaşımı</li>
-          <li>1 sosyal medya hikayesi</li>
-        </ul>
-        <div class="price">149₺</div>
-      </div>
+<section class="section" id="form">
+  <h2>🧾 Reklam Başvuru Formu</h2>
+  <p class="mail">Formu doldurunca mail uygulaması açılır ve başvuru bize gönderilir.</p>
 
-      <div class="card">
-        <h3>Standart</h3>
-        <ul>
-          <li>Yayında 3 kez duyuru</li>
-          <li>Discord + sosyal medya</li>
-          <li>1 gün sabit paylaşım</li>
-          <li>Hikaye + post</li>
-        </ul>
-        <div class="price">299₺</div>
-      </div>
+  <form onsubmit="sendMail(); return false;">
+    <input id="ad" type="text" placeholder="Adınız / Firma Adı" required>
+    <input id="iletisim" type="text" placeholder="Telefon / Instagram / Discord" required>
 
-      <div class="card">
-        <h3>Pro</h3>
-        <ul>
-          <li>Yayın boyunca tanıtım</li>
-          <li>Tüm platformlarda paylaşım</li>
-          <li>3 gün sabit reklam</li>
-          <li>Hikaye + post + reels</li>
-        </ul>
-        <div class="price">499₺</div>
-      </div>
+    <select id="kategori" required>
+      <option value="">Reklam Kategorisi Seç</option>
+      <option>Araç Satışı</option>
+      <option>Ev / Gayrimenkul</option>
+      <option>Dükkan / Mekan</option>
+      <option>Ürün / Hizmet</option>
+      <option>Kutu Açılışı</option>
+      <option>Kampanya / İndirim</option>
+    </select>
 
-      <div class="card">
-        <h3>VIP</h3>
-        <ul>
-          <li>7 gün reklam</li>
-          <li>Yayında özel vurgu</li>
-          <li>Tüm platformlarda öne çıkarma</li>
-          <li>Link + sabit yorum</li>
-        </ul>
-        <div class="price">799₺</div>
-      </div>
-    </div>
-  </section>
+    <select id="paketsec" required>
+      <option value="">Paket Seç</option>
+      <option>Başlangıç - 149₺</option>
+      <option>Standart - 299₺</option>
+      <option>Pro - 499₺</option>
+      <option>VIP - 799₺</option>
+      <option>Kutu Açılışı Özel</option>
+    </select>
 
-  <section class="section">
-    <h2>🎁 Kutu Açılışı Reklam Paketi</h2>
-    <div class="grid">
-      <div class="card"><div class="icon">📦</div><h3>Ürün Gönderimi</h3><p>Ürününüz yayın/video konseptinde tanıtılır.</p></div>
-      <div class="card"><div class="icon">🎥</div><h3>Video İçerik</h3><p>Kutu açılışı daha dikkat çekici içerik haline getirilir.</p></div>
-      <div class="card"><div class="icon">💬</div><h3>Canlı Etkileşim</h3><p>İzleyiciler ürünü görür, yorum yapar ve soru sorabilir.</p></div>
-    </div>
-  </section>
+    <textarea id="mesaj" placeholder="Reklam detaylarını yazın. Ürün, fiyat, konum, açıklama, link vb." required></textarea>
 
-  <section class="section steps" id="nasil">
-    <h2>⚙️ Nasıl Çalışır?</h2>
-    <div class="grid">
-      <div class="card step"><h3>Bilgileri Gönder</h3><p>Reklam yapılacak ürün, araç, ev veya işletme bilgilerini ilet.</p></div>
-      <div class="card step"><h3>Paket Seç</h3><p>Başlangıç, Standart, Pro veya VIP paketlerinden birini seç.</p></div>
-      <div class="card step"><h3>İçerik Hazırlansın</h3><p>Reklam metni, afiş veya paylaşım içeriği hazırlanır.</p></div>
-      <div class="card step"><h3>Yayınlansın</h3><p>Reklam sosyal medya, Discord veya yayınlarda paylaşılır.</p></div>
-    </div>
-  </section>
+    <button type="submit">📧 Reklam Talebini Mail Olarak Gönder</button>
+  </form>
 
-  <section class="section links" id="linkler">
-    <h2>🔗 Tüm Linklerimiz</h2>
-    <a href="https://jerrydenizz.github.io/" target="_blank">🌐 Web Site</a>
-    <a href="https://youtube.com/@jerrydenizz" target="_blank">🎮 YouTube Oyun Kanalı</a>
-    <a href="https://www.youtube.com/@deniz_kopal" target="_blank">🎵 YouTube Müzik Kanalı</a>
-    <a href="https://twitch.tv/jerrydenizz" target="_blank">🟣 Twitch</a>
-    <a href="https://instagram.com/jerrydenizz" target="_blank">📸 Instagram</a>
-    <a href="https://tiktok.com/@jerrydenizz" target="_blank">🎵 TikTok</a>
-    <a href="https://discord.gg/ZfGRnVXY" target="_blank">💬 Discord</a>
-  </section>
+  <p class="mail">Direkt mail: <b>denizcemil3434@gmail.com</b></p>
+</section>
 
-  <section class="section">
-    <p class="note">Senin reklamın, bizim gücümüz! 🚀</p>
-    <p style="text-align:center">Reklam alanı, sosyal medya tanıtımı ve kutu açılışı iş birlikleri için bize ulaş.</p>
-  </section>
+<section class="section links" id="linkler">
+  <h2>🔗 Tüm Linklerimiz</h2>
+  <a href="mailto:denizcemil3434@gmail.com?subject=Reklam Talebi">📧 Mail Gönder</a>
+  <a href="https://jerrydenizz.github.io/" target="_blank">🌐 Web Site</a>
+  <a href="https://youtube.com/@jerrydenizz" target="_blank">🎮 YouTube Oyun Kanalı</a>
+  <a href="https://www.youtube.com/@deniz_kopal" target="_blank">🎵 YouTube Müzik Kanalı</a>
+  <a href="https://twitch.tv/jerrydenizz" target="_blank">🟣 Twitch</a>
+  <a href="https://instagram.com/jerrydenizz" target="_blank">📸 Instagram</a>
+  <a href="https://tiktok.com/@jerrydenizz" target="_blank">🎵 TikTok</a>
+  <a href="https://discord.gg/ZfGRnVXY" target="_blank">💬 Discord</a>
+</section>
+
+<section class="section">
+  <p class="note">Senin reklamın, bizim gücümüz! 🚀</p>
+  <p style="text-align:center">Reklam vermek için formu doldur veya mail gönder.</p>
+</section>
 
 </div>
 
 <footer>© 2026 Jerry Deniz Reklam | Tüm Hakları Saklıdır</footer>
+
+<script>
+function sendMail(){
+  const ad=document.getElementById("ad").value;
+  const iletisim=document.getElementById("iletisim").value;
+  const kategori=document.getElementById("kategori").value;
+  const paket=document.getElementById("paketsec").value;
+  const mesaj=document.getElementById("mesaj").value;
+
+  const subject="Reklam Talebi - " + kategori;
+  const body=
+`Ad / Firma: ${ad}
+İletişim: ${iletisim}
+Kategori: ${kategori}
+Paket: ${paket}
+
+Reklam Detayları:
+${mesaj}`;
+
+  window.location.href=
+  "mailto:denizcemil3434@gmail.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+}
+</script>
 
 </body>
 </html>
